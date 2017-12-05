@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NLP Demo</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.3/tufte.css" />
+    </head>
+    <body>
+        <h1>NLP Sample App</h1>
+        <tiny>Colin Carroll</tiny>
+        <p>An example of wiring responsive <a href="https://jquery.com/">jQuery</a> together with <a href="http://flask.pocoo.org/">Flask</a> and <a href="https://spacy.io/">spaCy</a> to 
+        make a simple, ml-powered app.
+
+        <br>
+
+        <textarea rows="10" cols="150" id="textInput">The Massachusetts Institute of Technology (MIT) is a private research university in Cambridge, Massachusetts. Founded in 1861 in response to the increasing industrialization of the United States, MIT adopted a European polytechnic university model and stressed laboratory instruction in applied science and engineering. </textarea>
+        <div id="textOutput"></div>
+        <table id="entitiesTable"></table>
+
+    <h2>Installation</h2>
+    <p>This assumes you are using <a href="https://conda.io/docs/">conda</a>, a
+    Python package manager similar to pip, but focused on numerical computing.  It
+    can be <a href="https://conda.io/miniconda.html">downloaded here</a>.
+
+        <ol>
+            <li> Get the code
+                <pre class="code">
+                    $ git clone https://github.com/ColCarroll/working_ml.git 
+                    $ cd working_ml
+                </pre>
+            </li>
+
+            <li>Create a virtual environment
+                <pre class="code">
+                    $ conda create -n working_ml python=3.6
+                    $ source activate working_ml
+                    $ conda install keras spacy scikit-learn seaborn matplotlib flask jupyter
+                    # The nlp library requires extra files
+                    $ python -m spacy download en
+                </pre>
+            </li>
+
+
+            <li> This command runs the this site:
+                <pre class="code">
+                    $ FLASK_APP=app.py flask run
+                     * Serving Flask app "app"
+                     * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+                </pre>
+            </li>
+
+            <li> In a new terminal
+                <pre class="code">
+                    $ cd working_ml
+                    $ open index.html
+                </pre>
+            </li>
+
+            <li>You could also (or instead) run the notebook in a new terminal with
+                <pre class="code">
+                    $ cd working_ml
+                    $ jupyter notebook
+                </pre>
+            </li>
+        </ol>
+
+    <h2>References</h2>
+
+        <h3>Basic Tools</h3>
+        <ul>
+            <li> <a href="https://www.python.org/">Python</a></li>
+            <li> <a href="https://cran.r-project.org/">R</a></li>
+            <li> <a href="https://julialang.org/">Julia</a></li>
+            <li> <a href="https://anaconda.org/">Anaconda</a> and <a href="https://conda.io/docs/">conda</a></li>
+            <li> <a href="http://jupyter.org/">Jupyter</a></li>
+        </ul>
+
+        <h3>Sharing</h3>
+        <ul>
+            <li><a href="http://flask.pocoo.org/">Flask</a></li>
+            <li> <a href="https://plot.ly/products/dash/">Dash</a></li>
+            <li> <a href="https://shiny.rstudio.com/">Shiny</a> (R)</li>
+        </ul>
+
+        <h3>Numeric Libraries</h3>
+        <ul>
+            <li> <a href="http://www.numpy.org/">NumPy</a></li>
+            <li> <a href="https://www.scipy.org/">SciPy</a></li>
+            <li> <a href="http://pandas.pydata.org/">pandas</a></li>
+        </ul>
+
+        <h3>Machine Learning</h3>
+        <ul>
+            <li> <a href="http://scikit-learn.org/stable/">scikit-learn</a></li>
+        </ul>
+
+        <h3>Visualization</h3>
+        <ul>
+            <li> <a href="https://matplotlib.org/">matplotlib</a></li>
+            <li> <a href="https://seaborn.pydata.org/">seaborn</a></li>
+            <li> <a href="http://bokeh.pydata.org/en/latest/">Bokeh</a></li>
+            <li> <a href="https://d3js.org/">d3js</a> (Javascript)</li>
+            <li> <a href="http://ggplot2.org/">ggplot2</a> (R)</li>
+        </ul>
+
+        <h3>Natural Language Processing</h3>
+        <ul>
+            <li> <a href="http://www.nltk.org/">nltk</a></li>
+            <li> <a href="https://spacy.io/">spaCy</a></li>
+            <li> <a href="https://radimrehurek.com/gensim/">gensim</a></li>
+        </ul>
+
+        <h3>Deep Learning</h3>
+        <ul>
+            <li> <a href="https://keras.io/">keras</a></li>
+            <li> <a href="https://www.tensorflow.org/">tensorflow</a></li>
+            <li> <a href="http://pytorch.org/">PyTorch</a></li>
+            <li> <a href="http://deeplearning.net/software/theano/">Theano</a></li>
+        </ul>
+    </body>
+</html>
