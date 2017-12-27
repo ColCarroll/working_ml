@@ -7,23 +7,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.3/tufte.css" />
     </head>
     <body>
-        <h1>NLP Sample App</h1>
+        <h1>NLP Sample App
+        </h1>
         <tiny>Colin Carroll</tiny>
+        <section>
         <p>An example of wiring responsive <a href="https://jquery.com/">jQuery</a> together with <a href="http://flask.pocoo.org/">Flask</a> and <a href="https://spacy.io/">spaCy</a> to 
-        make a simple, ml-powered app.
+        make a simple, ml-powered app.<label for="intro" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="intro" class="margin-toggle"/>
+            <span class="sidenote">This is a demo used in a lecture for MAS 500 at MIT in the Fall 
+            of 2017.  The goal was to provide an overview of tools and considerations for using 
+            machine learning while building software.  My lecture notes, a Jupyter notebook, are 
+            available 
+            <a href="https://github.com/ColCarroll/working_ml/blob/master/working_ml.ipynb">on github</a>
+        </span>
+        </p>
+        <p>
+        It runs on 
+        <a href="https://github.com/ColCarroll/working_ml/blob/master/app.py">~20 lines of Python</a>, and 
+        <a href="https://github.com/ColCarroll/working_ml/blob/master/app.js">~20 lines of JavaScript</a>.
+        </p>
 
         <br>
 
-        <textarea rows="10" cols="150" id="textInput">The Massachusetts Institute of Technology (MIT) is a private research university in Cambridge, Massachusetts. Founded in 1861 in response to the increasing industrialization of the United States, MIT adopted a European polytechnic university model and stressed laboratory instruction in applied science and engineering. </textarea>
+        <textarea rows="20" cols="80" id="textInput">The Massachusetts Institute of Technology (MIT) is a private research university in Cambridge, Massachusetts. Founded in 1861 in response to the increasing industrialization of the United States, MIT adopted a European polytechnic university model and stressed laboratory instruction in applied science and engineering. </textarea>
         <div id="textOutput"></div>
         <table id="entitiesTable"></table>
+    </section>
 
-    <h2>Introduction</h2>
-    <p>This is a demo used in a lecture for MAS 500 at MIT in the Fall of 2017.  The goal was to provide 
-    an overview of tools and considerations for using machine learning while building software.  My lecture
-    notes, a Jupyter notebook, are available at 
-    <a href="https://github.com/ColCarroll/working_ml/blob/master/working_ml.ipynb">https://github.com/ColCarroll/working_ml/blob/master/working_ml.ipynb</a>
 
+    <section>
     <h2>Installation</h2>
     <p>This assumes you are using <a href="https://conda.io/docs/">conda</a>, a
     Python package manager similar to pip, but focused on numerical computing.  It
@@ -31,14 +43,14 @@
 
         <ol>
             <li> Get the code
-                <pre class="code">
+                <pre class="code fullwidth">
                     $ git clone https://github.com/ColCarroll/working_ml.git 
                     $ cd working_ml
                 </pre>
             </li>
 
             <li>Create a virtual environment
-                <pre class="code">
+                <pre class="code fullwidth">
                     $ conda create -n working_ml python=3.6
                     $ source activate working_ml
                     $ conda install keras spacy scikit-learn seaborn matplotlib flask jupyter
@@ -49,7 +61,7 @@
 
 
             <li> This command runs the this site:
-                <pre class="code">
+                <pre class="code fullwidth">
                     $ FLASK_APP=app.py flask run
                      * Serving Flask app "app"
                      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -71,6 +83,9 @@
             </li>
         </ol>
 
+    </section>
+
+    <section>
     <h2>References</h2>
 
         <h3>Basic Tools</h3>
@@ -125,5 +140,6 @@
             <li> <a href="http://pytorch.org/">PyTorch</a></li>
             <li> <a href="http://deeplearning.net/software/theano/">Theano</a></li>
         </ul>
+    </section>
     </body>
 </html>
