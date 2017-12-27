@@ -1,7 +1,7 @@
 $(function(){
   function getNamedEntities() {
     var queryText = $('#textInput').val();
-    $.post("http://localhost:5000/ner", { text: queryText }, function(response){
+    $.post("https://nlp.colindcarroll.com/ner", { text: queryText }, function(response){
       $("#entitiesTable").empty();
       $.each(response, function(i, item) {
         $('<tr>').append( 

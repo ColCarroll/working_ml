@@ -10,7 +10,6 @@ NLP = spacy.load('en')
 def ner():
     data = request.form.get('text')
     entities = []
-    print(data)
     if data:
         for ent in NLP(data).ents:
             entities.append({
